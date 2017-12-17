@@ -95,7 +95,7 @@ if (role == 1)  {
 
     const char text[40] = "Hello GiNberry";
     char dest_txt[10];
-    String(Temperature,2);
+    String dest_text=String(Temperature,2);
        
     unsigned long start_time = micros(); 
      
