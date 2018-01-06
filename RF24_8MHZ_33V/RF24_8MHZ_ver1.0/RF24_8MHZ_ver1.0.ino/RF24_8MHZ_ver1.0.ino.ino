@@ -42,6 +42,8 @@ byte addresses[][6] = {"00001","00002"};
 bool role = 1;
 
 void setup() {
+
+  
   Serial.begin(115200);
  // Serial.println("Dallas Temperature IC Control Library Demo");
 
@@ -51,6 +53,8 @@ void setup() {
   // Serial.println(F("*** PRESS 'T' to begin transmitting to the other node"));
   
   radio.begin();
+  radio.setDataRate(RF24_250KBPS);  // Better range, Fast enough
+  radio.setChannel(108); // 2.508 Ghz - Above most Wifi Channels
 
   // Set the PA Level low to prevent power supply related issues since this is a
  // getting_started sketch, and the likelihood of close proximity of the devices. RF24_PA_MAX is default.
@@ -93,7 +97,7 @@ if (role == 1)  {
   
     //delay(1000);
     radio.powerUp();
-    delay(50);
+    delay(100);
     //radio.setChannel(1);
    radio.stopListening();                                    // First, stop listening so we can talk.
     
