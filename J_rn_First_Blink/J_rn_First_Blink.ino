@@ -26,7 +26,7 @@ void setup() {
   // initialize digital pin LED_BUILTIN as an output.
   pinMode(LED_BUILTIN, OUTPUT);
   pinMode(10,OUTPUT);
-  blink(LED_BUILTIN,5);
+ // blink(LED_BUILTIN,5);
 }
 
 // the loop function runs over and over again forever
@@ -35,7 +35,7 @@ void loop() {
   digitalWrite(10,HIGH);
   delay (500);
   digitalWrite(10,LOW);
-  delay(500);
+  delay(1000);
   }
 
 void blink (int pin, int n)
