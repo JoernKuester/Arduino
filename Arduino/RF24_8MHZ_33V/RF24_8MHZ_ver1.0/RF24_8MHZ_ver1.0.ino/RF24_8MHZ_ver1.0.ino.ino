@@ -147,7 +147,7 @@ if (role == 1)  {
     // Try again 1s later
    // delay(10000);
    radio.powerDown();
-      for (i =0;i<365;i ++)
+      for (i =0;i<30;i ++)
   {
   LowPower.powerDown(SLEEP_8S, ADC_OFF, BOD_OFF);
   
